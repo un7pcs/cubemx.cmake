@@ -47,6 +47,8 @@ def getCore(mcuName):
 
 def getFpu(mcuName):
     # TODO in case of m7 core, check if it has single or double precision fpu
+    if(mcuName == "STM32WL"):
+        return None
     fpuTable = {
         "cortex-m0": None,
         "cortex-m0plus": None,
