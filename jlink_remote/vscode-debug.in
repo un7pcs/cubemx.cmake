@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "@PROJ_NAME@",
+            "cwd": "${workspaceRoot}",
+            "executable": "@PROJ_ELF_PATH@",
+            "request": "@JLINK_LAUNCH_TYPE@",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "svdFile": "@JLINK_SVD_FILE@",
+            "serverArgs": [@JLINK_OPT@],
+            "device" : "@JLINK_TARGET_NAME@",
+            "interface" : "@JLINK_INTERFACE_TYPE@",
+            "ipAddress": "@JLINK_REMOTE_IP@",
+            "runToEntryPoint": "main",
+            "rttConfig": {
+                "enabled": true,
+                "address": "auto",
+                "decoders": [
+                    {
+                        "label": "RTT",
+                        "port": 0,
+                        "type": "console"
+                    }
+                ]
+            }
+        }
+    ]
+}
